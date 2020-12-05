@@ -1,0 +1,49 @@
+html {
+  height: 100%;
+  font-size: 16pt;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url(skyline.png), linear-gradient(to bottom, #220a64, #3a2078);
+  background-position: center, bottom left, center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-size: auto, 40%, auto;
+
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+
+  min-width: 20rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: #fff;
+  font-size: 15vw;
+}
+
+img {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+#monkey {
+  width: 10vw;
+  position: fixed;
+  top: 51%;
+  left: 49%;
+}
