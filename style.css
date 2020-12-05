@@ -46,9 +46,15 @@ img {
   position: fixed;
   top: 51%;
   left: 49%;
+
+  transform-origin: center top;
+  animation-name: fadeInAnimation, swingAnimation;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
 }
 
-.fadeIn {
+#wordmark {
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
@@ -61,4 +67,11 @@ img {
   100% {
     opacity: 1;
   }
+}
+
+@keyframes swingAnimation {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(-10deg); }
+  60% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
 }
