@@ -61,12 +61,8 @@ img {
 }
 
 @keyframes fadeInAnimation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes swingAnimation {
@@ -74,4 +70,72 @@ img {
   20% { transform: rotate(-10deg); }
   60% { transform: rotate(10deg); }
   100% { transform: rotate(0deg); }
+}
+
+.star {
+  opacity: 0;
+  position: fixed;
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+body .star:nth-child(1) {
+  animation-delay: 0s;
+  left: 10vw;
+  top: 2vh;
+}
+
+body .star:nth-child(2) {
+  animation-delay: 1s;
+  left: 6vw;
+  top: 6vh;
+}
+
+body .star:nth-child(3) {
+  animation-delay: 2s;
+  left: 90vw;
+  top: 20vh;
+}
+
+body .star:nth-child(4) {
+  animation-delay: 3s;
+  left: 4vw;
+  top: 50vh;
+}
+
+body .star:nth-child(5) {
+  animation-delay: 4s;
+  left: 70vw;
+  top: 70vh;
+}
+
+body .star:nth-child(6) {
+  animation-delay: 5s;
+  left: 87vw;
+  top: 12vh;
+}
+
+body .star:nth-child(7) {
+  animation-delay: 6s;
+  left: 50vw;
+  top: 30vh;
+}
+
+body .star:nth-child(8) {
+  animation-delay: 7s;
+  left: 10vw;
+  top: 20vh;
+}
+
+body .star:nth-child(9) {
+  animation-delay: 8s;
+  left: 60vw;
+  top: 10vh;
+}
+
+body .star:nth-child(10) {
+  animation-delay: 9s;
+  left: 90vw;
+  top: 90vh;
 }
