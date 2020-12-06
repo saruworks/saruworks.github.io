@@ -6,11 +6,7 @@ html {
 body {
   margin: 0;
   height: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url(skyline.png), linear-gradient(to bottom, #220a64, #3a2078);
-  background-position: center, bottom left, center;
-  background-repeat: no-repeat;
   overflow: hidden;
-  background-size: auto, 40%, auto;
 
   image-rendering: pixelated;
   image-rendering: -moz-crisp-edges;
@@ -21,6 +17,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  background-repeat: no-repeat;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(skyline_tokyotower_lights.png),
+    url(skyline.png),
+    linear-gradient(to bottom, #220a64, #3a2078);
+
+  background-position: center, bottom left, bottom left, center;
+  background-size: auto, 40%, 40%, auto;
+
+  animation: backgroundBlendAnimation ease-in-out 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 h1 {
@@ -58,6 +68,15 @@ img {
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+}
+
+@keyframes backgroundBlendAnimation {
+  from {
+    background-blend-mode: normal, normal, normal, normal;
+  }
+  to {
+    background-blend-mode: normal, darken, normal, normal;
+  }
 }
 
 @keyframes fadeInAnimation {
